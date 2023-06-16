@@ -1,0 +1,13 @@
+<!--component/searchbar-return/searchbar-return.wxml-->
+<view class="searchbar" style="height: 68px">
+    <view class="searchbar-wrapper" style="margin-top: 28px;height:32px;width: 272px">
+        <view class="return" style="width: 40px;">
+                <image src="../../images/semiDesign-semi-icons-undo@1x.png" style="margin-left: 2px;" class="returnImage" bindtap="onClickReturn"></image>
+        </view>
+        <view class="search-group" style="width: 230px;" bindtap="onclickTopSearch">
+            <image src="../../images/top-search.png" class="searchicon" bindtap="OnTapSearch"></image>
+            <input class="search-input" value="{{match}}" placeholder="输入点什么吧" bindinput="getInputValue"></input>
+            <image src="../../images/delete_click.png" mode="aspectFill" class="delete-clickicon" bindtap="OnTapX"></image>
+        </view>
+    </view>
+</view>
