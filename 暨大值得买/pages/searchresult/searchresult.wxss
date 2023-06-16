@@ -1,0 +1,22 @@
+view {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+  }
+.custom-bar{
+    background-color:#11D183 ;
+    display: flex;
+    flex-direction: row;
+}
+.return {
+    padding: 0 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .returnIcon{
+    height: 45rpx;
+    width: 45rpx;
+    margin-top:10px;
+  }

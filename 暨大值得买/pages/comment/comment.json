@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "searchbar":"../../component/searchbar/searchbar",
+        "custom-swiper":"../../component/custom-swiper/custom-swiper",
+        "searchbar-return":"../../component/searchbar-return/searchbar-return"
+    }
+}

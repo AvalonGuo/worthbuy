@@ -1,0 +1,35 @@
+/* pages/search/search.json.wxss */
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.text-content{
+    display: flex;
+    flex-direction: row;
+}
+.search-history-regard-box{
+    display:flex;
+    background: #eeecec;
+    
+}
+
+.search-history-regard-text{
+    display:flex;
+    font-size: 14px;
+}
+
+.delete{
+    display:flex;
+    font-size: 20px;
+    font-weight: 500;
+    height: 25px;
+    line-height: 14px;
+    padding: 6px;
+    background: #eeecec;
+    color: #27c94a;
+}
+
+.hot-regard-text{
+    display:flex;
+    font-size: 14px;
+}

@@ -1,0 +1,60 @@
+/* pages/tip-off/tip-off.wxss */
+.view {
+    display: flex;
+    flex-direction: column;
+  }
+.custom-bar{
+    background-color:#11D183 ;
+    display: flex;
+    flex-direction: row;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 540px;
+    width: 342px;
+    border-style: double;
+    border-width: 1px;
+    border-radius: 64px;
+    padding: 30px; 
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    height: 40px;
+    width: 282px;
+}
+.tipoff-icon{
+    width: 25px;
+    height: 25px;
+}
+.gsinput{
+    padding-left: 8px;
+    width: 170px;
+    margin-left: 0px;
+    border-style: double;
+    border-radius: 10px;
+    border-width: 1px;
+}
+.picker-item{
+    padding-left: 8px;
+    margin-left: 3px;
+    width: 70px;
+    border-width: 1px;
+    border-style: double;
+    border-radius: 10px;
+}
+.imagelist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.imagelist .last-item{
+    margin-left: 10px;
+    width: 150rpx;
+    height: 150rpx;
+    text-align: center;
+    line-height: 146rpx;
+    border: 2rpx dashed #8b97a9;
+    box-sizing: border-box;
+}

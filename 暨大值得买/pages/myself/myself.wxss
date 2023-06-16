@@ -1,0 +1,19 @@
+/* pages/myself/myself.wxss */
+.custom-bar{
+    background-color:#11D183 ;
+    display: flex;
+    flex-direction: row;
+}
+.text-content{
+    display: flex;
+    flex-direction: row;
+    border-style: double;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.report-wrapper{
+    border-style: groove;
+}

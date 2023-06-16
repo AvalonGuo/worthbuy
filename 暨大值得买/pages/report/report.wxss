@@ -1,0 +1,43 @@
+/* pages/report/report.wxss */
+.container view{
+  width: 220px;
+  height: 340px;
+  text-align: left;
+  text-indent: 6mm;
+  line-height: 50px;
+  border-radius: 5mm; border-width: thin;
+  border-style: solid;
+  border-color: silver;
+}
+.btn1 {
+  width: 80%;
+  margin-top: 20px;
+  background-color: silver;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} 
+.custom-bar{
+    background-color:#11D183 ;
+    display: flex;
+    flex-direction: row;
+}
+.return {
+    padding: 0 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .returnIcon{
+    height: 45rpx;
+    width: 45rpx;
+    margin-top:10px;
+  }
+  .text-content{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+
+<view style="flex-direction: column; height: 100%;">
+  <!-- 顶部绿色图片 -->
+  <view style="height: 30%;">
+    <image src="/images/green.png" style="width: 100%;height: 100%;"></image>
+  </view>
+
+  
+  <view style="height: 40%;">
+    
+    <view class="view_input" ><input placeholder="请输入手机号" bindinput="getUserID" class="input_general"  type="digit" maxlength="11"/></view>
+    <view class="view_input"><input class="input_general" bindinput="getUserPassword" type="safe-password" password="false" placeholder="请输入密码"/></view>
+    <view class="view_forgetpw" bindtap="onTapForgetPW"><text style="width: 100%;height: 100%;color: gray;">忘记密码</text></view>
+  </view>
+
+  <view style="height: 40%;">
+    <button id="btn_login" bindtap="onTapLogin">登录</button>
+    <view style="flex-direction: row;font-size: small;margin-top: 5%;">
+      <text style="margin-left: 40%;">没有账号？</text>
+      <text id="text_signup" bindtap="onTapSignup">注册</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/myself/myself.wxml-->
+<view class="container">
+    <view class="custom-bar" style="height: 80px;">
+        <text style="margin-top: 30px;margin-left: 158px;font-size: 20px;">我的</text>
+    </view>
+</view>
+<view style="margin-top: 20px;" class="text-content">
+    <text style="font-size: 18px;">我举报的商品</text>
+    <image src="{{show?rowlist[1]:rowlist[0]}}" style="width: 20px;height: 20px;margin-left: 30px;" bindtap="OnTapShow"></image>
+</view>
+<view wx:if="{{show}}">
+    <block wx:for="{{Reports}}" wx:key="*this">
+        <view class="report-wrapper">
+            <text>你举报了商品：{{item.gdname}}。</text>
+            <text>原因:{{item.reason}}</text>
+        </view>
+    </block>
+</view>
+<view style="margin-top: 20px;" class="text-content">
+    <text style="font-size: 18px;">关注商品的评论</text>
+    <image src="{{show1?rowlist[1]:rowlist[0]}}" style="width: 20px;height: 20px;margin-left: 30px;" bindtap="OnTapShow1"></image>
+</view>
+<view wx:if="{{show1}}">
+    <block wx:for="{{Comment}}" wx:key="*this">
+        <view class="report-wrapper">
+            <text>用户：{{item.uid}}评论了你关注的商品--</text>
+            <text>{{item.gdname}}--"{{item.comment}}。"</text>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,34 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+}
+
+.input_general{
+  background-color: #FFFFFF;
+  height: 100%;
+}
+.view_input{
+  height: 15%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2%;
+  border-bottom: 0.5px solid gray;
+}
+.view_forgetpw{
+  background: transparent;
+  width: 15%;
+  height: 7%;
+  font-size: small;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#btn_login{
+  background-color: #11D183;
+  color: #FFFFFF;
+}
+#text_signup{
+  color: #11D183;
+  width: 50%;
+}

@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "searchbar-return":"../../component/searchbar-return/searchbar-return"
+    }
+}

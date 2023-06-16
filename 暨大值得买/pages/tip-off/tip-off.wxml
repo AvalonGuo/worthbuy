@@ -1,0 +1,46 @@
+<!--pages/tip-off/tip-off.wxml-->
+<view class="container">
+    <view class="custom-bar" style="height: 80px;">
+        <text style="margin-top: 30px;margin-left: 163px;font-size: 20px;">爆料</text>
+    </view>
+    <view class="wrapper">
+        <view class="input-wrapper">
+            <image class="tipoff-icon" src="../../images/ze-bag.png"></image>
+            <text style="margin-top: 4px;font-size: 14px;">商品名称：</text>
+            <input  class="gsinput" value="" maxlength="10" value="{{gdname}}" bindinput="GetGdname" placeholder="商品名称"></input>
+        </view>
+        <view class="input-wrapper">
+            <image class="tipoff-icon" src="../../images/if-yen@1x.png"></image>
+            <text style="margin-top: 4px;font-size: 14px;">当前价格：</text>
+            <input  class="gsinput" value="" maxlength="10" placeholder="当月价格" bindinput="GetCurrentPrice"></input>
+        </view>
+        <view class="input-wrapper">
+            <image class="tipoff-icon" src="../../images/fas fa-calendar.png"></image>
+            <text style="margin-top: 4px;font-size: 14px;">月份—价格:</text>
+            <picker bindchange="bindPickerChange" mode="selector" range="{{iarray}}" value="{{index}}">
+                <view class="picker-item">{{iarray[index]}}月份</view>
+            </picker>
+            <text>——</text>
+            <input style="width: 55px;border-style: double;border-radius: 10px;border-width: 1px;padding-left: 7px;" bindinput="GetHtryPrice" value="{{htryPrice[array[index]]}}"></input>
+        </view>
+        <view class="input-wrapper" style="height: 70px;">
+            <image class="tipoff-icon" src="../../images/fas fa-comment@1x.png"></image>
+            <text style="margin-top: 4px;font-size: 14px;margin-left:3px;">评价：</text>
+            <input style="margin-left:20px;height: 50px;" class="gsinput" value="{{input}}" maxlength="30" bindinput="GetInput"></input>
+        </view>
+        <view class="input-wrapper" style="height: 70px;">
+            <image class="tipoff-icon" src="../../images/fas fa-image@1x.png"></image>
+            <text style="margin-top: 4px;font-size: 14px;margin-left:3px;">上传图片：</text>
+        </view>
+        <view class="imagelist">
+            <view wx:for="{{imgs}}" wx:key="*this" style="display: flex;flex-direction: row;">
+                <image src="{{item}}" style="height: 75px;width: 75px;margin-left: 10px;border-style:dotted;border-width: 1px;"></image>
+            </view>
+            <view class="last-item" wx:if="{{imgs.length>=3?false:true}}" bindtap="OnTapUpload">
+                <text class="sign">+</text>
+            </view>
+        </view>
+    </view>
+    <button style="margin-top: 35px;background-color: #E86D61;" bindtap="OnTapTipOff">发布</button>
+</view>
+

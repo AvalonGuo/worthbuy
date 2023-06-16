@@ -1,0 +1,38 @@
+<!--pages/register/register.wxml-->
+<view style="display: flex;flex-direction: column;">
+    <view class="searchbar" style="height: 68px">
+        <view class="searchbar-wrapper" style="margin-top: 28px;height:32px;width: 272px">
+            <view class="return" style="width: 40px;">
+                    <image src="../../images/semiDesign-semi-icons-undo@1x.png" style="margin-left: 2px;" class="returnImage" bindtap="onClickReturn"></image>
+            </view>
+            <view class="text-wrapper">
+                <text style="text-align: center;">注册</text>
+            </view>
+        </view>
+    </view>
+    <view style="display: flex;flex-direction: column;margin-top: 30rpx;">
+        <view class="input-wrapper">
+            <view class="input-item">
+                <text>手机号</text>
+                <input maxlength="10"  bindinput="getUserID"></input>
+            </view>
+            <view class="divLine" style="margin-top: 30rpx;" ></view>
+            <view class="input-item" style="margin-top: 30rpx;">
+                <text>验证码</text>
+                <input maxlength="6" bindinput="getCodeInput"></input>
+                <button size="mini" bindtap="onTapcodeGet">获取验证码</button>
+            </view>
+            <view class="divLine" style="margin-top: 30rpx;" ></view>
+            <view class="input-item" style="margin-top: 30rpx;">
+                <text>密码</text>
+                <input type="text" maxlength="6" placeholder="请输入新密码" bindinput="getUserPassword" password="{{!open}}" ></input>
+                <image src="{{open?'../../images/open-eye.png':'../../images/no-eye.png'}}" class="eye" catchtap="switch"></image>
+            </view>
+
+        </view>
+    </view>
+    <label class="protocol">
+        <checkbox class="protocol" bindtap="switchbtn"/>用户协议
+    </label>
+    <button class='makesure' bindtap="onTapRegister" disabled="{{!btndisable}}">确定</button>
+</view>

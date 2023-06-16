@@ -1,0 +1,15 @@
+<view class="container" style="width: 687rpx; height: 811rpx; display: flex; box-sizing: border-box; position: relative; left: 0rpx; top: 158rpx">
+    <searchbar-return bind:OnMyEvent="OnTapDelete"></searchbar-return>
+    <view class="text-content" style="width: 572rpx; height: 561rpx; display: flex; box-sizing: border-box; position: relative; left: -26rpx; top: -200rpx">
+    历史记录
+        <view class="search-history-regard-box" style="width: 251rpx; height: 64rpx; display: block; box-sizing: border-box; position: relative; left: -115rpx; top: 71rpx">
+            <view class="search-history-regard-text"  style="position: relative; left: 30rpx; top: 12rpx; width: 186rpx; height: 45rpx; display: block; box-sizing: border-box">苹果手机壳
+            </view>
+            <button class="delete" bindtap="delete" style="width: 57rpx; height: 45rpx; display: block; box-sizing: border-box; left: 98rpx; top: -45rpx; position: relative">×</button>
+        </view>
+    </view>
+    <text style="position: relative; left: -237rpx; top: -182rpx">热搜榜单</text>
+    <text class="hot-regard-text" style="position: relative; left: -71rpx; top: -136rpx">·暨南大学周边美食</text>
+    <text class="hot-regard-text"  style="position: relative; left: -71rpx; top: -92rpx">·暨南大学周边商品</text>
+</view>
+   

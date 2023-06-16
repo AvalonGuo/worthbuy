@@ -1,0 +1,42 @@
+
+<view class="container">
+    <view class="custom-bar" style="height: 80px;">
+        <view style="width: 40px;" class="return" bindtap="OnTapReturn">
+            <image src="../../images/semiDesign-semi-icons-undo@1x.png" class="returnIcon"></image>
+        </view>
+        <text style="margin-top: 32px;margin-left: 90px;font-size: 20px;">商品列表</text>
+    </view>
+    <scroll-view wx:for="{{goods}}" wx:key="id" style="width: 95%;height:360px;"  class="scrollx" scroll-top="550px" 
+     >
+        <view class="swiper-group">
+            <view class="text-content">
+                <view class="gdname">
+                    <!--商品名-->
+                    <view style="margin-left: 15px;">{{item.gdname}}</view>
+                </view> 
+                <!--评论按钮-->
+                <button class="comment" style="width: 20%;" bindtap="onClickComment">评论</button>
+                <!--关注按钮-->
+                <button class="star" bindtap="getStarInfo" style="margin-left: 8px;width: 80px;" data-goodid="{{item.id}}" data-index="{{index}}" plain="{{starlist[index]==1?plain:!plain}}">
+                    <image src="{{starlist[index]==1?zelist[0]:zelist[1]}}" class="icon"></image>
+                    <text class="startext">{{starlist[index]==1?"已关注":"关注"}}</text>
+                </button>
+            </view>
+            <view style="height: 260px;">
+                <image src="{{checkprice[index]==0?item.first_pic:item.line}}" style="width: 100%;" mode="widthFix" class="itempic"></image>
+            </view>
+
+            <view class="text-content" style="margin-top: 10px;">
+                <!--商品价格-->
+                <view class="gdprice">
+                    <image src="../../images/if-yen@1x.png" style="width: 16px;height: 16px;margin-top: 4px;"></image>
+                    <view style="margin-left:px; font-size: 16px;">{{item.price}}</view>
+                </view>
+                <button class="htryprice"  style="width: 120px;margin-left: 8px;"  id="{{index}}" data-goodid="{{item.id}}" bindtap="onClickHtryprice">
+                    <text style="font-size: 12px;">历史价格曲线</text>
+                </button>
+            </view>
+        </view>
+        <view class="divLine"></view>
+    </scroll-view>
+</view>

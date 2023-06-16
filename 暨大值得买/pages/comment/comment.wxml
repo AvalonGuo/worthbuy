@@ -1,0 +1,78 @@
+<view class="container">
+    <view class="custom-bar" style="height: 80px;">
+        <view style="width: 40px;" class="return" bindtap="OnTapReturn">
+            <image src="../../images/semiDesign-semi-icons-undo@1x.png" class="returnIcon"></image>
+        </view>
+        <text style="margin-top: 30px;margin-left: 103px;font-size: 20px;">商品详情</text>
+    </view>
+    <view class="swiper-group">
+        <view class="text-content">
+            <view class="gdname">
+                <view style="margin-left: 15px;">{{good[0].gdname}}</view>
+            </view>
+            <button class="report" style="width: 20%;" data-index="{{index}}" bindtap="OnTapReport">举报</button>
+            <button class="star" bindtap="getStarInfo" style="margin-left: 8px;width: 80px;"  plain="{{star==1?plain:!plain}}">
+                <image src="{{star==1?zelist[0]:zelist[1]}}" class="icon"></image>
+                    <text class="startext">{{star==1?"已关注":"关注"}}</text>
+            </button>
+        </view>
+        <view wx:if="{{checkprice==0}}">
+            <swiper class="swiper" autoplay="true" circular="true">
+                <swiper-item  wx:for="{{pic}}" wx:key="*this">
+                    <image src="{{item}}">
+                    </image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view wx:if="{{checkprice==1}}" style="margin-top: 20px;">
+            <image src="{{good[0].line}}"></image>
+        </view>
+        <view class="text-content">
+            <view class="gdprice">
+                <image src="../../images/if-yen@1x.png" style="width: 16px;height: 16px;margin-top: 4px;"></image>
+                <view style="margin-left:px; font-size: 16px;">{{good[0].price}}</view>
+            </view>
+            <button class="htryprice"  style="width: 120px;margin-left: 4px;" data-goodid="{{good[0].id}}" bindtap="onClickHtryprice">
+                    <text style="font-size: 12px;">历史价格曲线</text>
+            </button>
+            <view class="deserve" wx:if="{{deserve[2]==1}}">
+                <image src="../../images/md-thumb_up_red.png" class="deserveIcon"></image>
+                <text style="margin-left: 5px;">值   {{deserve[0]}}</text>
+            </view>
+            <view class="deserve" style="margin-left: 50px;" wx:if="{{deserve[2]==0}}">
+                <image src="../../images/md-thumb_down_red.png" class="deserveIcon"></image>
+                <text style="margin-left: 5px;">不值   {{deserve[1]}}</text>
+            </view>
+        </view>
+        <view class="deserve_or_not" wx:if="{{deserve[2]==3}}">
+            <view class="deserve" data-index="1" bindtap="OnTapDeserve">
+                <image src="../../images/md-thumb_up@1x.png" class="deserveIcon"></image>
+                <text style="margin-left: 5px;">值   {{deserve[0]}}</text>
+            </view>
+            <view class="deserve" style="margin-left: 50px;" data-index="0" bindtap="OnTapDeserve">
+                <image src="../../images/md-thumb_down@1x.png" class="deserveIcon"></image>
+                <text style="margin-left: 5px;">不值   {{deserve[1]}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="divLine" style="margin-top: 10px;"></view>
+    <view class="comment-area" wx:for="{{comments}}" wx:key="*this">
+        <view class="comment-wrapper">
+            <view style="height: 100rpx;width: 100rpx;"> 
+            <image src="../../images/圆形头像@1x.png" style="width:40px;height: 40px;"></image>
+            </view>
+            <view style="display: flex;flex-direction: column;width: 200px;" >
+                <text>{{item.uid}}</text>
+                <text>{{item.comment}}</text>
+            </view>
+        </view>
+        <view class="divLine" style="margin-top: 2px;"></view>
+    </view>
+</view>
+<view class="input-wrapper">
+        <input class="myinput" value="{{input}}" bindinput="OnTapInput"></input>
+        <button style="height: 40px;font-size: 18px;width: 90px;border-style: double;border-width: 1px;background-color: tomato;" bindtap="OnTapFaBu"
+         disabled="{{!input}}">发布</button>
+</view>
+
+
